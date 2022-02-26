@@ -1,6 +1,20 @@
+import bcrypt from "bcryptjs";
+
 const data = {
+    users: [{
+            name: "Andrei",
+            email: "admin@ase.ro",
+            password: bcrypt.hashSync("1234", 8),
+            isAdmin: true,
+        },
+        {
+            name: "John",
+            email: "user@ase.ro",
+            password: bcrypt.hashSync("1234", 8),
+            isAdmin: false,
+        }
+    ],
     products: [{
-            _id: '1',
             name: 'IT Stephen King',
             category: 'book',
             image: '/images/produs-1.jpg',
@@ -11,7 +25,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '2',
             name: 'Pet Sematary Stephen King',
             category: 'book',
             image: '/images/produs-8.jpg',
@@ -22,7 +35,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '3',
             name: 'Ice & Fire George R.R. Martin',
             category: 'book',
             image: '/images/produs-7.jpg',
@@ -33,7 +45,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '4',
             name: 'To Kill A Mockingbird Harper Lee',
             category: 'book',
             image: '/images/produs-9.jpg',
@@ -44,7 +55,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '5',
             name: '1984 George Orwell',
             category: 'book',
             image: '/images/produs-10.jpeg',
@@ -55,7 +65,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '6',
             name: 'Animal Farm George Orwell',
             category: 'book',
             image: '/images/produs-11.jpg',
@@ -66,7 +75,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '7',
             name: 'Laptop DELL',
             category: 'pc',
             image: '/images/produs-2.jpg',
@@ -77,7 +85,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '8',
             name: 'Bicicleta Pegas Albastra',
             category: 'bike',
             image: '/images/produs-3.jpg',
@@ -88,7 +95,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '9',
             name: 'Smartphone A909',
             category: 'phone',
             image: '/images/produs-4.jpg',
@@ -99,7 +105,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '10',
             name: 'Volvo XC90',
             category: 'car',
             image: '/images/produs-5.jpg',
@@ -110,7 +115,6 @@ const data = {
             description: 'High quality product',
         },
         {
-            _id: '11',
             name: 'Joc video GTA VI',
             category: 'game',
             image: '/images/produs-6.jpg',
