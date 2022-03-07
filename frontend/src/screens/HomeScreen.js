@@ -26,7 +26,7 @@ export default function HomeScreen(){
     //   }
     // }
     // fetchData();
-    dispatch(listProducts());
+    dispatch(listProducts({}));
   },[dispatch]);
   return(
     <div>
